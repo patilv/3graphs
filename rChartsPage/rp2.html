@@ -1,0 +1,58 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart62c4b097d2f' class='rChart polycharts'></div>  
+    
+    <script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart62c4b097d2f",
+"width":    800,
+"height":    400,
+"layers": [
+ {
+ "x": "Var2",
+"y": "Freq",
+"data": {
+ "Var1": [ "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2", "level1", "level2" ],
+"Var2": [ "levelA", "levelA", "levelB", "levelB", "levelC", "levelC", "levelA", "levelA", "levelB", "levelB", "levelC", "levelC", "levelA", "levelA", "levelB", "levelB", "levelC", "levelC", "levelA", "levelA", "levelB", "levelB", "levelC", "levelC" ],
+"Var3": [ "levelI", "levelI", "levelI", "levelI", "levelI", "levelI", "levelII", "levelII", "levelII", "levelII", "levelII", "levelII", "levelIII", "levelIII", "levelIII", "levelIII", "levelIII", "levelIII", "levelIV", "levelIV", "levelIV", "levelIV", "levelIV", "levelIV" ],
+"Freq": [ 5, 0, 4, 0, 4, 0, 0, 4, 0, 5, 0, 4, 4, 0, 4, 0, 4, 0, 0, 4, 0, 4, 0, 4 ] 
+},
+"facet": null,
+"color": "Var1",
+"type": "bar" 
+} 
+],
+"facet": {
+ "var": "Var3",
+"type": "wrap",
+"rows":      2 
+},
+"guides": [],
+"coord": [],
+"id": "chart62c4b097d2f" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart62c4b097d2f = polyjs.chart(chartParams);
+</script>
+    
+  </body>
+</html>

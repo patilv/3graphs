@@ -1,0 +1,600 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/cosmo/bootstrap.min.css">
+     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" >
+    <link rel='stylesheet' href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css">
+    <link rel='stylesheet' href="http://aozora.github.io/bootplus/assets/css/docs.css">
+    <link rel='stylesheet' href='http://nvd3.org/src/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 100%;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: "";
+      background: transparent;
+      border: none;
+    }
+    </style>
+    
+  </head>
+  <body ng-app>
+      
+    <div class='container' ng-controller="DemoCtrl">
+  <div class='row'>
+    <div class='span3'>
+      <form class='well'>
+        <label><b>Select  x :</b></label>
+    		<select ng-model="opts.x" 
+          ng-options="ctl for ctl in controls.x.values">   
+    		</select><br>
+        <label><b>Select  y :</b></label>
+    		<select ng-model="opts.y" 
+          ng-options="ctl for ctl in controls.y.values">   
+    		</select><br>
+        <label><b>Select  group :</b></label>
+    		<select ng-model="opts.group" 
+          ng-options="ctl for ctl in controls.group.values">   
+    		</select><br>
+      </form>
+    </div>
+    <div class='span8'>
+      <div class="bs-docs-example">
+        <div id='chart62c4a3e4f3e' class='rChart '>
+          <svg></svg>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function DemoCtrl($scope){
+  $scope.opts = {
+ "dom": "chart62c4a3e4f3e",
+"width":    700,
+"height":    400,
+"x": "NumVar1",
+"y": "NumVar2",
+"group": "FacVar1",
+"type": "scatterChart",
+"id": "chart62c4a3e4f3e" 
+}
+  $scope.data = [
+ {
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelI",
+"NumVar1":         971.98,
+"NumVar2":         787.58,
+"NumVar3":            843,
+"NumVar4": 2001 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelII",
+"NumVar1":         988.49,
+"NumVar2":        1288.31,
+"NumVar3":            577,
+"NumVar4": 2002 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelIII",
+"NumVar1":        1077.94,
+"NumVar2":         908.98,
+"NumVar3":           1329,
+"NumVar4": 2003 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelIV",
+"NumVar1":        1003.53,
+"NumVar2":        1383.02,
+"NumVar3":             32,
+"NumVar4": 2004 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelI",
+"NumVar1":        1006.46,
+"NumVar2":        1440.47,
+"NumVar3":             56,
+"NumVar4": 2005 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelII",
+"NumVar1":        1085.75,
+"NumVar2":         545.56,
+"NumVar3":            317,
+"NumVar4": 2006 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelIII",
+"NumVar1":        1023.05,
+"NumVar2":        1028.11,
+"NumVar3":            314,
+"NumVar4": 2007 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelIV",
+"NumVar1":         936.75,
+"NumVar2":        1392.42,
+"NumVar3":            145,
+"NumVar4": 2008 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelI",
+"NumVar1":         965.66,
+"NumVar2":        1051.44,
+"NumVar3":           2726,
+"NumVar4": 2009 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelII",
+"NumVar1":         977.72,
+"NumVar2":         956.61,
+"NumVar3":             29,
+"NumVar4": 2010 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelIII",
+"NumVar1":         1061.2,
+"NumVar2":        1456.83,
+"NumVar3":           1005,
+"NumVar4": 2011 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelIV",
+"NumVar1":        1017.99,
+"NumVar2":         953.33,
+"NumVar3":            480,
+"NumVar4": 2012 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelI",
+"NumVar1":        1020.04,
+"NumVar2":        1177.57,
+"NumVar3":            281,
+"NumVar4": 2013 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelII",
+"NumVar1":        1005.53,
+"NumVar2":        1072.63,
+"NumVar3":            377,
+"NumVar4": 2014 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelIII",
+"NumVar1":         972.21,
+"NumVar2":         602.92,
+"NumVar3":            188,
+"NumVar4": 2015 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelIV",
+"NumVar1":        1089.35,
+"NumVar2":        1399.82,
+"NumVar3":            850,
+"NumVar4": 2016 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelI",
+"NumVar1":        1024.89,
+"NumVar2":         746.09,
+"NumVar3":           1563,
+"NumVar4": 2017 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelII",
+"NumVar1":         901.67,
+"NumVar2":         542.06,
+"NumVar3":            479,
+"NumVar4": 2018 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelIII",
+"NumVar1":        1035.07,
+"NumVar2":         827.92,
+"NumVar3":            591,
+"NumVar4": 2019 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelIV",
+"NumVar1":         976.36,
+"NumVar2":         1454.5,
+"NumVar3":           4041,
+"NumVar4": 2020 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelI",
+"NumVar1":         946.61,
+"NumVar2":        1389.54,
+"NumVar3":            843,
+"NumVar4": 2021 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelII",
+"NumVar1":          989.1,
+"NumVar2":         1192.8,
+"NumVar3":            966,
+"NumVar4": 2022 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelIII",
+"NumVar1":          948.7,
+"NumVar2":        1140.51,
+"NumVar3":           1485,
+"NumVar4": 2023 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelIV",
+"NumVar1":         963.56,
+"NumVar2":        1494.27,
+"NumVar3":           1348,
+"NumVar4": 2024 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelI",
+"NumVar1":         968.75,
+"NumVar2":        1155.71,
+"NumVar3":           1169,
+"NumVar4": 2025 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelII",
+"NumVar1":         915.67,
+"NumVar2":        1208.53,
+"NumVar3":           1606,
+"NumVar4": 2026 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelIII",
+"NumVar1":        1041.89,
+"NumVar2":        1044.07,
+"NumVar3":           1497,
+"NumVar4": 2027 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelIV",
+"NumVar1":        1007.67,
+"NumVar2":        1094.14,
+"NumVar3":           1571,
+"NumVar4": 2028 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelI",
+"NumVar1":         943.09,
+"NumVar2":         789.16,
+"NumVar3":             32,
+"NumVar4": 2029 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelII",
+"NumVar1":        1062.69,
+"NumVar2":         647.11,
+"NumVar3":            598,
+"NumVar4": 2030 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelIII",
+"NumVar1":        1021.32,
+"NumVar2":        1463.02,
+"NumVar3":           2168,
+"NumVar4": 2031 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelIV",
+"NumVar1":         985.25,
+"NumVar2":         1402.3,
+"NumVar3":            507,
+"NumVar4": 2032 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelI",
+"NumVar1":        1044.76,
+"NumVar2":        1190.71,
+"NumVar3":            260,
+"NumVar4": 2033 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelII",
+"NumVar1":        1043.91,
+"NumVar2":        1295.47,
+"NumVar3":           2597,
+"NumVar4": 2034 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelIII",
+"NumVar1":        1041.08,
+"NumVar2":         524.61,
+"NumVar3":           1229,
+"NumVar4": 2035 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelIV",
+"NumVar1":        1034.43,
+"NumVar2":          977.8,
+"NumVar3":            791,
+"NumVar4": 2036 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelI",
+"NumVar1":         1027.7,
+"NumVar2":        1258.46,
+"NumVar3":            629,
+"NumVar4": 2037 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelII",
+"NumVar1":          996.9,
+"NumVar2":         716.41,
+"NumVar3":           1255,
+"NumVar4": 2038 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelIII",
+"NumVar1":          984.7,
+"NumVar2":         818.18,
+"NumVar3":            589,
+"NumVar4": 2039 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelIV",
+"NumVar1":         980.98,
+"NumVar2":         731.63,
+"NumVar3":           1129,
+"NumVar4": 2040 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelI",
+"NumVar1":         965.26,
+"NumVar2":          642.8,
+"NumVar3":            420,
+"NumVar4": 2041 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelII",
+"NumVar1":          989.6,
+"NumVar2":         914.55,
+"NumVar3":           7211,
+"NumVar4": 2042 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelIII",
+"NumVar1":         936.73,
+"NumVar2":         913.72,
+"NumVar3":            846,
+"NumVar4": 2043 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelIV",
+"NumVar1":        1108.45,
+"NumVar2":         868.85,
+"NumVar3":            226,
+"NumVar4": 2044 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelC",
+"FacVar3": "levelI",
+"NumVar1":         1060.4,
+"NumVar2":         652.44,
+"NumVar3":           1100,
+"NumVar4": 2045 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelA",
+"FacVar3": "levelII",
+"NumVar1":         943.84,
+"NumVar2":         638.81,
+"NumVar3":           2248,
+"NumVar4": 2046 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelB",
+"FacVar3": "levelIII",
+"NumVar1":         979.86,
+"NumVar2":         733.03,
+"NumVar3":           1364,
+"NumVar4": 2047 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelC",
+"FacVar3": "levelIV",
+"NumVar1":         976.67,
+"NumVar2":         965.96,
+"NumVar3":            576,
+"NumVar4": 2048 
+},
+{
+ "FacVar1": "level1",
+"FacVar2": "levelA",
+"FacVar3": "levelI",
+"NumVar1":           1039,
+"NumVar2":         765.97,
+"NumVar3":           2725,
+"NumVar4": 2049 
+},
+{
+ "FacVar1": "level2",
+"FacVar2": "levelB",
+"FacVar3": "levelII",
+"NumVar1":         995.83,
+"NumVar2":        1357.83,
+"NumVar3":           1312,
+"NumVar4": 2050 
+} 
+]
+  $scope.controls = {
+ "x": {
+ "name": "x",
+"value": "NumVar1",
+"values": [ "NumVar1", "NumVar2", "NumVar3", "NumVar4" ],
+"label": "Select  x :" 
+},
+"y": {
+ "name": "y",
+"value": "NumVar2",
+"values": [ "NumVar1", "NumVar2", "NumVar3", "NumVar4" ],
+"label": "Select  y :" 
+},
+"group": {
+ "name": "group",
+"value": "FacVar1",
+"values": [ "FacVar1", "FacVar2", "FacVar3" ],
+"label": "Select  group :" 
+} 
+}           
+  $scope.drawChart = function(){
+    drawChart($scope.opts, $scope.data)  
+  }
+  $scope.$watch('opts',function(){
+    $scope.drawChart()
+	}, true)
+}  
+
+function drawChart(opts, data){  
+	var data = d3.nest()
+		.key(function(d){
+			return opts.group === undefined ? 'main' : d[opts.group]
+		})
+		.entries(data)
+	
+	nv.addGraph(function() {
+		var chart = nv.models[opts.type]()
+			.x(function(d) { return d[opts.x] })
+			.y(function(d) { return d[opts.y] })
+			.width(opts.width)
+			.height(opts.height)
+		
+	
+          
+	
+
+	
+	
+	
+
+	d3.select("#" + opts.id + ' svg')
+		.datum(data)
+		.transition().duration(500)
+		.call(chart);
+	
+	 nv.utils.windowResize(chart.update);
+	 return chart;
+  });
+};
+</script>
+    
+  </body>
+  <!-- Google Prettify -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script 
+    src='https://google-code-prettify.googlecode.com/svn-history/r232/trunk/src/lang-r.js'>
+  </script>
+  <script>
+    var pres = document.getElementsByTagName("pre");
+    for (var i=0; i < pres.length; ++i) {
+      pres[i].className = "prettyprint linenums";
+    }
+    prettyPrint();
+  </script>
+</html>

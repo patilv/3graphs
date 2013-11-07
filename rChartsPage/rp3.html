@@ -1,0 +1,61 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart62c5d537d44' class='rChart polycharts'></div>  
+    
+    <script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart62c5d537d44",
+"width":    800,
+"height":    400,
+"layers": [
+ {
+ "x": "Mean",
+"y": "Group2",
+"data": {
+ "Group1": [ "level1", "level2", "level1", "level2", "level1", "level2" ],
+"Group2": [ "levelA", "levelA", "levelB", "levelB", "levelC", "levelC" ],
+"Mean": [ 1004.8, 1004.5, 996.32, 989.91, 1011.8,   1004 ] 
+},
+"facet": "Group1",
+"color": "Group2",
+"type": "point" 
+} 
+],
+"facet": {
+ "type": "wrap",
+"var": "Group1" 
+},
+"guides": {
+ "x": {
+ "min":    970,
+"max":   1050 
+} 
+},
+"coord": [],
+"id": "chart62c5d537d44" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart62c5d537d44 = polyjs.chart(chartParams);
+</script>
+    
+  </body>
+</html>

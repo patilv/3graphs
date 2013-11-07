@@ -1,0 +1,81 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
+    <script src='http://code.highcharts.com/highcharts.js' type='text/javascript'></script>
+    <script src='http://code.highcharts.com/highcharts-more.js' type='text/javascript'></script>
+    <script src='http://code.highcharts.com/modules/exporting.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body>
+    <div id='chart62c6cc33e3' class='rChart highcharts'></div>  
+    
+    <script type='text/javascript'>
+    (function($){
+        $(function () {
+            var chart = new Highcharts.Chart({
+ "dom": "chart62c6cc33e3",
+"width":            800,
+"height":            400,
+"credits": {
+ "href": null,
+"text": null 
+},
+"exporting": {
+ "enabled": false 
+},
+"title": {
+ "text": null 
+},
+"yAxis": [
+ {
+ "title": {
+ "text": "NumVar1" 
+} 
+} 
+],
+"series": [
+ {
+ "name": "NumVar1 Distribution",
+"data": [
+ [         936.73,         971.98,        1021.32,         1027.7,           1039 ],
+[         943.84,         979.35,        996.315,        1025.79,        1089.35 ],
+[         943.09,         956.98,         993.16,       1032.985,         1061.2 ],
+[         976.36,         976.36,         988.49,          996.9,        1005.53 ],
+[         946.61,        968.935,       1013.295,        1052.58,        1077.94 ],
+[         901.67,        970.115,       1003.795,        1048.56,        1085.75 ] 
+] 
+} 
+],
+"xAxis": [
+ {
+ "categories": [ "level1.levelA", "level2.levelB", "level1.levelC", "level2.levelA", "level1.levelB", "level2.levelC" ],
+"title": {
+ "text": "Interaction of FacVar1 and FacVar2" 
+} 
+} 
+],
+"chart": {
+ "type": "boxplot",
+"renderTo": "chart62c6cc33e3" 
+},
+"id": "chart62c6cc33e3" 
+});
+        });
+    })(jQuery);
+</script>
+    
+  </body>
+</html>
